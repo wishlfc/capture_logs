@@ -1,0 +1,19 @@
+python capture_l1_l2_log.py -h
+Usage: capture_l1_l2_log.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -b BTS_S1IP           bts s1 ip, such as 10.69.xx.xx
+  -d DOMAIN_SLOT        domain:slot, such as 1:2
+  -c CAPTURE_FILE       log filename, such as "/home/work/temp/capture/"
+  -r RELEASE            release, such as 19A 19B 20A 20B 21A 5G19
+  -l L2_LOG_DURATION    log duration, such as 30(unit is s)
+  -t L1_REGISTERS_LOG_DURATION
+                        log duration, such as 60(unit is s)
+  -m RUNTIME_STARTTIME  runtime log starttime: 1 min ago or "2020-06-19
+                        10:27:00", default is 1 min ago
+  -n RUNTIME_ENDTIME    runtime log endtime : now or "2020-06-19 10:28:00",
+                        default is now
+
+
+example cmd:python capture_l1_l2_log.py -b 10.108.231.168 -d 1:2 -r 19B -l 30 -t 60 -m '1 min ago' -n now
